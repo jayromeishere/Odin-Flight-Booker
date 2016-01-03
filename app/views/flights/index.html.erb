@@ -1,0 +1,15 @@
+<h1>Let's book a flight!</h1>
+	<%= render 'select_flight_form' %>
+
+<% if params[:q].blank? %>
+	<%= " " %>
+<% else %>
+	<% unless @search_results.nil? %>
+		<%= render 'search_results_form' %>		
+	<% else %>
+		<%= "There are no flights that match your requested dates.  Please try again." %>
+	<% end %>
+<% end %>
+
+
+

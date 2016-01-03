@@ -1,0 +1,13 @@
+<tr>
+	<%= hidden_field_tag("booking[number_of_passengers]", "#{params[:q][:passengers]}") %>
+	<td><%= radio_button_tag("booking[flight_id]", "#{flight.id}") %></td>
+	<td><%= flight.origin.code %></td>
+	<td><%= flight.destination.code %></td>
+	<td><%= flight.departure_time.strftime("%A, %B %e") %></td>
+	<td><%= flight.duration.strftime("%I hours") %></td>
+</tr>
+
+
+
+
+

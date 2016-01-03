@@ -1,0 +1,15 @@
+<%= form_for(@passenger, url: { action: "create" } ) do |p| %>
+	<% for i in 1..params[:booking][:number_of_passengers] do %>
+		<%= p.label "name_#{i}", "Name:"%>
+		<%= p.text_field "name_#{i}" %>
+		
+		<%= p.label "email_#{i}", "Email:" %>
+		<%= p.email_field "email_#{i}" %></br>
+		
+		<%= p.fields_for :booking do |booking_form| %>
+			<%= booking_form.hidden_field(:flight_id, params[:booking][:flight_id]) %>
+		<% end %>	
+	<% end %>
+	<%= p.submit "Book Now" %>
+<% end %>
+

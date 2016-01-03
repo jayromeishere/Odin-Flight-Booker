@@ -1,0 +1,8 @@
+<h1>Booking <%= @booking.id %> </h1>
+Origin: <%= @booking.flight.origin.code %></br>
+Destination: <%= @booking.flight.destination.code %></br></br>
+
+<h2>Passengers:</h2>
+<ul>
+<%= render @booking.passengers %>
+</ul>

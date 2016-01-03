@@ -1,0 +1,24 @@
+<%= form_tag("", method: "get") do %>
+	<%= label_tag(:origin, "FROM:") %>
+	<%= select_tag("q[origin]", options_for_select(@airport_options)) %>
+	
+	<%= label_tag(:destination, "TO:") %>
+	<%= select_tag("q[destination]", options_for_select(@airport_options)) %>
+	
+	<%= label_tag(:passengers, "Number of Passengers:") %>
+	<%= select_tag("q[passengers]", options_for_select(@passenger_options)) %>
+	</br>
+	</br>
+	<%= label_tag(:departure_date, "Date:") %></br>
+	<%= label_tag(:departure_month, "Month:") %>
+	<%= select_month(Date.today, prefix: "q[date]") %>
+	
+	<%= label_tag(:departure_day, "Day:") %>
+	<%= select_day(Date.today, prefix: "q[date]") %>
+	
+	<%= label_tag(:departure_year, "Date:") %>
+	<%= select_year(Date.today, prefix: "q[date]") %>
+	</br>
+	</br>
+	<%= submit_tag("Search") %>
+<% end %>
