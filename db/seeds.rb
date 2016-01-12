@@ -14,35 +14,35 @@ mia = Airport.create(code: "MIA")
 flight1 = Flight.create(
   origin_id:      1,
   destination_id: 2,
-  departure_time:         "2016-1-1 12:00:00",
+  departure_time:         "2017-1-1 12:00:00",
   duration:               "3:00:00"
 )
 
 flight2 = Flight.create(
   origin_id:      1,
   destination_id: 3,
-  departure_time:         "2016-1-1 1:00:00",
+  departure_time:         "2017-1-1 1:00:00",
   duration:               "4:00:00"
 )
 
 flight3 = Flight.create(
   origin_id:      2,
   destination_id: 3,
-  departure_time:         "2016-1-3 4:00:00",
+  departure_time:         "2017-1-3 4:00:00",
   duration:               "5:00:00"
 )
 
 flight4 = Flight.create(
   origin_id:      4,
   destination_id: 2,
-  departure_time:         "2016-1-4 9:00:00",
+  departure_time:         "2017-1-4 9:00:00",
   duration:               "5:00:00"
 )
 
 flight5 = Flight.create(
   origin_id:      1,
   destination_id: 2,
-  departure_time:         "2016-1-5 9:00:00",
+  departure_time:         "2017-1-5 9:00:00",
   duration:               "3:00:00"
 )
 
