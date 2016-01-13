@@ -5,4 +5,6 @@ class Flight < ActiveRecord::Base
     #to ensure Rails saves multiples of objects in nested forms 
   has_many :passengers, through: :bookings 
   
+  accepts_nested_attributes_for :bookings 
+  
 end

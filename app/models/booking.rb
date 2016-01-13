@@ -1,7 +1,7 @@
 class Booking < ActiveRecord::Base
   belongs_to :flight
-  has_many :passengers
+  belongs_to :passenger
   
-  accepts_nested_attributes_for :passengers
+  accepts_nested_attributes_for :passenger
 
 end

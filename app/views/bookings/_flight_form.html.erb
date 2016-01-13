@@ -1,0 +1,12 @@
+<%= form_for @selected_flight do |f| %>
+	<%= f.fields_for :bookings do |b| %>
+		<%= b.fields_for :passenger do |passenger_form| %>
+			<%= passenger_form.label :name, "Name:" %>
+			<%= passenger_form.text_field :name %>
+			
+			<%= passenger_form.label :email, "Email:" %>
+			<%= passenger_form.email_field :email %></br>
+		<% end %>	
+	<% end %>
+	<%= f.submit "Book Now" %>
+<% end %>
